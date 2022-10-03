@@ -50,3 +50,22 @@ web3.eth.getTransactionCount(addressFrom, (err, txCount) => {
         }
     });
 });
+
+
+
+
+
+//
+//library Counters {
+    struct Counter {
+        uint256 _value; // default: 0
+    }
+
+    function current(Counter storage counter) internal view returns (uint256) {
+        return counter._value;
+    }
+
+    function increment(Counter storage counter) public {  
+        counter._value += 1;
+    }
+}
